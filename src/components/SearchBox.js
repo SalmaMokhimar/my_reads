@@ -12,6 +12,7 @@ const SearchBox = ({query, resultsList, books, updateShelf}) => {
   return (
     <div className="search-books">
       <div className="search-books-bar">
+      <Link className="close-search" to="/"></Link>
         <div className="search-books-input-wrapper">
           <input
             type="text"
