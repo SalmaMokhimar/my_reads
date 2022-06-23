@@ -4,16 +4,13 @@ import PropTypes from "prop-types";
 
 
 const Book = ({ book, updateShelf }) => {
-  const BookimageURL = book.imageLinks.smallThumbnail ? book.imageLinks.smallThumbnail  : "../default-img.png";
+  console.log(book);
+  const BookimageURL = book.imageLinks? book.imageLinks.smallThumbnail : "../default-img.png";
   const shelfName = book.shelf ? book.shelf : "none";
-
-  /*const shelfName= () => {
-    return book.shelf ? 
-    book.shelf: "none";
-  }*/
+  const bookID= book.id;
 
   return (
-    <li>
+    <li key = {bookID} >
       <div className="book">
         <div className="book-top">
           <div
